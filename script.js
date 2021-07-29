@@ -36,3 +36,20 @@ var decrementQty = minusBtn.click(function() {
     }
     update_amounts();
 });
+let trush = Array.from(document.querySelectorAll(".fa-trash-alt"));
+trush.map((el) =>
+  el.addEventListener("click", function () {
+    el.parentNode.remove();
+    
+    somme();
+ })
+);
+
+let hearts = document.getElementsByClassName("fa-heart");
+ for (let heart of hearts) {
+ heart.addEventListener("click", function () {
+if(heart.style.color==="red"){
+   heart.style.color="gray"
+ }
+else heart.style.color="red"
+heart.classList.toggle("red"); });}
